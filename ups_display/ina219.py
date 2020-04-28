@@ -180,6 +180,13 @@ class INA219:
         if value > 32767:
             value -= 65535
         return value * self._current_lsb
+
+    def getPower_W(self):
+        self.write(_REG_CALIBRATION,self._cal_value)
+        value = self.read(_REG_POWER)
+        if value > 32767:
+            value -= 65535
+        return value * self._power_lsb
     
 if __name__=='__main__':
  
