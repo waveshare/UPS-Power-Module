@@ -10,9 +10,7 @@ Follow the steps below to download UPS-Power-Moduledirectly or create it from sc
 
 On the jetson nano, run the ups-display installation script
 
-    ```bash
     git clone https://github.com/waveshare/UPS-Power-Module
     cd jetcard
     ./install.sh <password>
-    ```
 
