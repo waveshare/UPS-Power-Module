@@ -6,8 +6,7 @@ import PIL.ImageFont
 import PIL.ImageDraw
 from flask import Flask
 from .utils import ip_address, power_mode, power_usage, cpu_usage, gpu_usage, memory_usage, disk_usage
-from jetcard import ads1115
-from jetcard import ina219
+from ups_display import ina219
 import os
 
 class DisplayServer(object):
