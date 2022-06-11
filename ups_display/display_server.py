@@ -76,13 +76,14 @@ class DisplayServer(object):
 
             # set stats fields
             top = 22
-            power_watts = '%.1f' % power_usage()
+            #power_watts = '%.1f' % power_usage()
             gpu_percent = '%02d%%' % int(round(gpu_usage() * 100.0, 1))
             cpu_percent = '%02d%%' % int(round(cpu_usage() * 100.0, 1))
             ram_percent = '%02d%%' % int(round(memory_usage() * 100.0, 1))
             disk_percent = '%02d%%' % int(round(disk_usage() * 100.0, 1))
             
-            entries = [power_watts, cpu_percent, gpu_percent, ram_percent, disk_percent]
+            #entries = [power_watts, cpu_percent, gpu_percent, ram_percent, disk_percent]
+            entries = [cpu_percent, gpu_percent, ram_percent, disk_percent]
             for i, entry in enumerate(entries):
                 self.draw.text((i * offset + 4, top), entry, font=self.font, fill=255)
 
